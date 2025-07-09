@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Entry Form</title>
+    <link rel="stylesheet" href="/Frontend/Css/components/upload_form.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/footer.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/global.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/header.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/toast.css">   
+    <!-- Link to the fontawsome icons file -->
+    <link href="/Frontend/Css/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- Link to the online axios CDN for fetching data -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <header class="header" id="Home">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="text_red">University</span> of <span class="text_blue">Liberia</span>
+            </a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="Index.html#Home">Home</a></li>
+                    <li><a href="Upload_form.html">Upload Form</a></li>
+                    <li><a href="Student_Records.html">Department Students</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="Upload_form_container">
+        <div class="form-container">
+            <h2 class="form-title">Student Data Entry Form</h2>
+
+            <form id="studentEntryForm" enctype="multipart/form-data">
+                
+                <!-- Container for the profile image display -->
+                <div class="form-group profile-image-display-group">
+                    <label class="form-label">Profile Picture Preview</label>
+                    <div id="profileImageContainer" class="profile-image-container">
+                        <img id="profilePicPreview" src="https://placehold.co/150x150/E0E0E0/374151?text=No+Image" alt="Profile Picture Preview" class="profile-image">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Profile_pic" class="form-label">Upload Profile Picture</label>
+                    <input type="file" id="Profile_pic" name="profile_pic" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="studentId" class="form-label">Student ID</label>
+                    <input type="text" id="studentId" name="student_studentID" placeholder="e.g., S-001-2023" class="form-input"
+                      required  >
+                </div>
+                <div class="form-group">
+                    <label for="studentName" class="form-label">Student Name</label>
+                    <input type="text" id="studentName" name="student_name" placeholder="e.g., Mary Johnson" class="form-input"
+                      required  >
+                </div>
+
+                <div class="form-group">
+                    <label for="courses" class="form-label">Courses</label>
+                    <input type="text" id="courses" name="student_courses" placeholder="e.g., Math 101, Physics 202, Language Art,"
+                        class="form-input"  required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="student_phoneNumber" placeholder="e.g., +1 (123) 456-7890 / +23177789383"
+                        class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" id="email" name="student_email" placeholder="e.g., johnson12@gmail.com"
+                        class="form-input" required >
+                </div>
+
+                <div class="Radio_group form-group">
+                     <h3 class="form-label">Attendances</h3>
+                    <div class="radio-options"> 
+                        <input type="radio" id="IsAttending" name="attendances" value="true" required >
+                        <label for="IsAttending">Yes</label>
+                        <input type="radio" id="IsNotAttending" name="attendances" value="false"  required>
+                        <label for="IsNotAttending">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="department" class="form-label">Department</label>
+                    <select id="department" name="student_department" class="form-select" required>
+                        <option value="">Select Department</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Business">Business Administration</option>
+                        <option value="Arts">Arts & Humanities</option>
+                        <option value="Science">Natural Sciences</option>
+                        <option value="Medicine">Medicine</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="level" class="form-label">Level</label>
+                    <select id="level" name="student_level" class="form-select" required>
+                        <option value="">Select Level</option>
+                        <option value="100">100 Level</option>
+                        <option value="200">200 Level</option>
+                        <option value="300">300 Level</option>
+                        <option value="400">400 Level</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment" class="form-label">Comment</label>
+                    <textarea id="comment" name="student_comment" rows="4" placeholder="Any additional comments or notes..."
+                        class="form-textarea" required ></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-button">
+                        Submit Data
+                    </button>
+                </div>
+                <p id="formMessage" ></p>
+            </form>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>University of Liberia</h3>
+                <p>
+                    Committed to academic excellence, research, and community service, fostering future leaders of
+                    Liberia and beyond.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Index.html#Home">Home</a></li>
+                    <li><a href="Upload_form.html">Upload Form</a></li>
+                    <li><a href="Student_Records.html">Department Students</a></li>
+                    <li><a href="About.html">About Department</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <p>
+                    123 University Ave, Monrovia, Liberia<br>
+                    Email: info@ul.edu.lr<br>
+                    Phone: +231 777 123 456
+                </p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; <span id="current-year"></span> University of Liberia. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- This is for the toast noticfication -->
+    <div id="toast-container"></div>
+
+
+    <!-- <script type="module" src="./Js/api.js"></script> -->
+    <script type="module" src="./Js/new_api.js"></script>
+    <script type="module" src="./Js/toast.js"></script>
+</body>
+
+</html>

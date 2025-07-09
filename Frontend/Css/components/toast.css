@@ -1,0 +1,87 @@
+/* Frontend/Css/toast.css (or add to global.css) */
+
+#toast-container {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other content */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none; /* Allows clicks to pass through to elements behind */
+}
+
+.toast {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.5s forwards, fadeOutSlideDown 0.5s forwards var(--toast-delay, 4s); /* Default delay */
+    min-width: 250px;
+    max-width: 350px;
+    word-wrap: break-word;
+    pointer-events: auto; /* Re-enable pointer events for the toast itself */
+}
+
+.toast.success {
+    background-color: #4CAF50; /* Green for success */
+}
+
+.toast.error {
+    background-color: #f44336; /* Red for error */
+}
+
+.toast.info {
+    background-color: #2196F3; /* Blue for info */
+}
+
+/* Optional: Icons for better visual feedback */
+.toast::before {
+    content: '';
+    font-family: 'Font Awesome 5 Free'; /* If you have Font Awesome, uncomment this */
+    font-weight: 900;
+    margin-right: 8px;
+}
+
+.toast.success::before {
+    content: '\f00c'; /* Checkmark icon */
+}
+
+.toast.error::before {
+    content: '\f00d'; /* Times icon */
+}
+
+.toast.info::before {
+    content: '\f05a'; /* Info circle icon */
+}
+
+/* Keyframe animations */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutSlideDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}

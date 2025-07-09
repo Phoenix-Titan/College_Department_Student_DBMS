@@ -1,0 +1,51 @@
+.Hero_section{
+    background-image: url('/Frontend/Images/university-of-liberia.webp');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height:90vh;
+}
+.Hero_text_container{
+    background-color: rgba(0, 0, 0, 0.674);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter:blur(5px);
+    width:60%;
+    color: white;
+    border-radius: 10px;
+    padding:2em;
+    position: relative;
+    top:90px;
+    left:40px;
+    display:flex;
+    flex-direction: column;
+}
+.Hero_text_container h1{
+    font-size:2rem;
+    font-weight: 600;
+    margin-bottom:10px;
+
+}
+.Hero_text_container h1 .text_red{
+    color: rgb(200, 15, 15);
+}
+.Hero_text_container h1 .text_blue{
+    color:rgb(28, 28, 255);  
+}
+
+.Hero_text_container a{
+    align-self: flex-end;
+    padding:1em 1em;
+    font-size:1rem;
+    font-weight: 600;
+    border-radius:10px;
+    outline: none;
+    background-color: rgb(36, 169, 47);
+    border: none;
+    color: white;
+    transition:.5s ease-in-out;
+}
+.Hero_text_container a:hover{
+    background-color: rgb(18, 233, 36);
+    cursor: pointer;
+    transform: scale(1.04);
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="/Frontend/Css/components/footer.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/global.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/header.css">
+    <link rel="stylesheet" href="/Frontend/Css/ProfilePage.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/toast.css">
+     <!-- Link to the fontawsome icons file -->
+    <link href="/Frontend/Css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header" id="Home">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="text_red">University</span> of <span class="text_blue">Liberia</span>
+            </a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="Index.html#Home">Home</a></li>
+                    <li><a href="Upload_form.html">Upload Form</a></li>
+                    <li><a href="Student_Records.html">Department Students</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="Profile">
+        <!-- This is the profile images box -->
+        <div class="Profile__banner">
+            <img src="./Images/university-of-liberia.webp" alt="Profile of the user">
+            <div class="Profile_pic">
+                <img src="./Images/images.png" alt="Profile pic">
+            </div>
+            
+        </div>
+        <!-- This is Profile title box -->
+        <div class="Profile__title">
+            <h2>Peter H. Johnson</h2>
+            <b>
+                <span class="Profile__studentID">Student ID: JUK33948 </span> | 
+                <span class="Profile_isAttending">Is Attending: ✅</span>
+            </b>
+            <p class="Profile_department">Department of Information Technology</p>
+
+            <div class="Edit_profile_btn">
+                <span class="edit_btn">
+                   Edit  <i class="fa-solid fa-pen fa-lg"></i>
+                </span>
+                <span class="delete_btn">
+                   Delete <i class="fa-solid fa-trash fa-lg"></i>
+                </span>
+            </div>
+
+        </div>
+
+        <!-- This is the Profile box -->
+        <div class="Profile_details">
+            <h2>Details</h2>
+            <!-- This is the Course info box -->
+            <div class="Profile__details_courses pop_background">
+                <h4>Student Courses</h4>
+                <ul class="Profile__Course_list">
+                   
+                </ul>
+            </div>
+            <!-- This the Contact info box -->
+            <div class="Profile_contact pop_background">
+                <h4>Contact Info</h4>
+                <div class="Profile_contact_info">
+                    <b>Phone Number: </b><span class="profile__Num">08938474949 / 03884493838</span>
+                    <br>
+                    <b>Email: </b><span class="profile_email">peterjackson33830@gmail.com</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- This is the Comment Box -->
+        <div class="Profile_comments">
+            <h4>Comments</h4>
+            <div class="Profile_comments_container">
+               
+            </div>
+            
+         </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>University of Liberia</h3>
+                <p>
+                    Committed to academic excellence, research, and community service, fostering future leaders of Liberia and beyond.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Index.html#Home">Home</a></li>
+                    <li><a href="Upload_form.html">Upload Form</a></li>
+                    <li><a href="Student_Records.html">Departments Student</a></li>
+                    <li><a href="About.html">About Department</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <p>
+                    123 University Ave, Monrovia, Liberia<br>
+                    Email: info@ul.edu.lr<br>
+                    Phone: +231 777 123 456
+                </p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; <span id="current-year"></span> University of Liberia. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- This is for the toast noticfication -->
+    <div id="toast-container"></div>
+
+
+    <script type="module" src="./Js/Display_studentProfile.js"></script>
+    <script type="module" src="./Js/toast.js"></script>
+    
+</body>
+</html>

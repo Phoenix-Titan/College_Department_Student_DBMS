@@ -1,0 +1,172 @@
+/* Custom font import */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); */
+
+
+
+
+.Record_container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 16px;
+    /* py-10 px-4 */
+}
+.Record_container_heading{
+    width: 100%;
+    max-width: 768px;
+    /* max-w-4xl (approx 896px in Tailwind, adjusted slightly for common breakpoints) */
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* shadow-lg */
+    border-radius: 8px;
+    /* rounded-lg */
+    padding: 24px;
+    /* p-6 */
+    margin-bottom: 32px;
+    /* mb-8 */
+    text-align: center;
+}
+
+
+.main-content {
+    width: 100%;
+    max-width: 968px;
+    /* max-w-4xl */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-cols-1 */
+    gap: 25px;
+    /* gap-6 */
+}
+
+/* SearchBar styling */
+.searchBar_container{
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius:10px;
+    padding:1em;
+    width:50%;
+    margin-bottom:2em;
+}
+
+.searchBar_container input{
+    width:80%;
+    padding:.8em 1em;
+    outline:none;
+    margin-left:1em;
+}
+.searchBar_container label{
+    background-color:greenyellow;
+    padding:.71em 1em;
+    margin-left:-4px;
+    border-radius:3px ;
+    border-bottom-left-radius:0px;
+    border-top-left-radius:0px;
+    transition:.4s ease-out;
+    cursor: pointer;
+}
+.searchBar_container label:hover{
+    background-color:rgb(112, 166, 30);
+    color: white;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.Profile_card_img{
+    background-color: #2563eb;
+    border:5px solid greenyellow;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin:0 auto;
+    margin-bottom:1em;
+}
+.Profile_card_img img{
+    width:91px;
+    height:91px;
+    border-radius:50%;
+    
+}
+
+.profile-card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* hover:shadow-xl */
+}
+
+.profile-card h2 {
+    font-size: 1.25rem;
+    /* text-xl */
+    font-weight: 600;
+    /* font-semibold */
+    color: #2d3748;
+    /* text-gray-800 */
+    margin-bottom: 12px;
+    /* mb-3 */
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* space-y-2 */
+    color: #4a5568;
+    /* text-gray-700 */
+}
+
+.profile-details strong {
+    font-weight: 500;
+    /* font-medium */
+}
+
+.profile-details span {
+    color: #2563eb;
+    /* text-blue-600 */
+}
+
+.profile-details a {
+    color: #4f46e5;
+    /* text-indigo-600 */
+    text-decoration: none;
+}
+
+.profile-details a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+
+    /* md breakpoint */
+    /* .container {
+        padding: 40px 24px;
+        
+    } */
+
+    .main-content {
+        grid-template-columns: repeat(2, 1fr);
+        /* md:grid-cols-2 */
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* lg breakpoint */
+    /* .container {
+        padding: 40px 32px;
+        
+    } */
+
+    .main-content {
+        grid-template-columns: repeat(3, 1fr);
+        /* lg:grid-cols-3 */
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/Frontend/Css/components/footer.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/global.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/header.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/toast.css">
+    <link rel="stylesheet" href="/Frontend/Css/signUp.css">
+     <!-- Link to the fontawsome icons file -->
+    <link href="/Frontend/Css/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- Link to the online axios CDN for fetching data -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <header class="header" id="Home">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="text_red">University</span> of <span class="text_blue">Liberia</span>
+            </a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="Index.html#Home">Home</a></li>
+                    <li><a href="Upload_form.html">Upload Form</a></li>
+                    <li><a href="Student_Records.html">Department Students</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="singUp_section">
+            <form id="SignUpUserForm" method="post">
+                <div class="signUp_container">
+                    <div class="signUp_title">
+                        <h1>Sign Up</h1>
+                    </div>
+                    <div class="signUp_group">
+                        <label for="username">Username</label><br>
+                        <input type="text" name="Username" id="username" placeholder="Eg: Username" required>
+                    </div>
+                    <br>
+                    <div class="signUp_group">
+                        <label for="password">Password</label><br>
+                        <input type="password" name="Password" id="password" placeholder="Eg: *********" required>
+                    </div>
+                    <div class="signUp_group">
+                        <label for="Confirm">Confirm Password</label><br>
+                        <input type="password" name="Confirm_password" id="Confirm" placeholder="Eg: *********" required>
+                    </div>
+                    <div class="signUp_group">
+                        <label for="SignUp_Key">Sign Up Key 🔑</label><br>
+                        <input type="password" name="Sign_up_Key" id="SignUp_Key" placeholder="Eg: *******" required>
+                    </div>
+
+                    
+                    <button type="submit" class="submit_btn">Sign Up</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- This is for the toast noticfication -->
+    <div id="toast-container"></div>
+
+
+
+    <script type="module" src="./Js/signUp.js"></script>
+    <script type="module" src="./Js/toast.js"></script>
+    
+</body>
+</html>

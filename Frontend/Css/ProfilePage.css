@@ -1,0 +1,134 @@
+/* Profile Banner stylings */
+.Profile{
+    width:80%;
+    margin:0 auto;
+    margin-top:1em;
+    margin-bottom:1em;
+    border-radius: 10px;
+    padding: 24px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Profile__banner{
+    height:285px;
+}
+.Profile__banner img{
+    width:100%;
+    max-height:260px;
+    border-radius: 12px;
+}
+
+.Profile_pic{
+    border-radius:50%;
+    border:4px solid green;
+    width:160px;
+    height:160px;
+    position: relative;
+    top:-90px;
+    left:50px;
+}
+.Profile_pic img{
+    width:152px;
+    height:152px;
+    border-radius:50%;
+}
+
+/* Profile Title styling */
+.Profile__title{
+    padding:70px 20px 20px 30px;
+    border-bottom:1px solid gray;
+    position: relative;
+}
+.Profile__title h2{
+    font-size:1.8rem;
+}
+.Profile_isAttending{
+    margin-left: .5em;
+}
+
+/* Profile Details styling */
+.Profile_details{
+    padding:20px;
+}
+.Profile_details h2{
+    padding-bottom:20px;
+}
+
+.Profile__Course_list{
+    padding:20px;
+}
+
+
+/* Contact info styling */
+.Profile_contact{
+    margin-top:1em;
+}
+.Profile_contact_info{
+    padding:20px;
+}
+.Profile_contact_info span {
+    font-style: italic;
+    font-size:.92rem;
+}
+
+
+/* Comment section styling */
+.Profile_comments h4{
+    padding:1em;
+}
+.Profile_comments_container{
+    display: flex;
+    justify-content: space-around;
+    column-gap:1.5em;
+    overflow-x:scroll;
+    height:230px;
+    
+}
+.Profile_comment_details{
+    display:flex;
+    flex-direction:column;
+    min-width:400px;
+    height: fit-content;
+    font-style: italic;
+}
+.Profile_comment_details_date{
+    align-self:flex-end;
+    margin-top: 1em;
+    font-size: small;
+}
+
+/* Extra styling */
+.pop_background{
+    background-color: #ededed;
+    padding:20px;
+    border-radius:10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Icons */
+.Edit_profile_btn{
+    position:absolute;
+    right:5em;
+    bottom:2em;
+}
+.Edit_profile_btn span{
+    padding:.8em;
+    border-radius:3px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color:#ededed;
+    margin:5px;
+    transition: .3s ease-in-out;
+    word-spacing:.2em;
+}
+.Edit_profile_btn span:hover{
+    padding:.9em;
+}
+.delete_btn:hover{
+    color:rgba(213, 17, 17, 0.817);
+}
+.edit_btn:hover{
+    color:rgba(47, 47, 233, 0.847);
+}

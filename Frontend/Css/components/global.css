@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f5f4ff;
+}
+li{
+    list-style: none;
+}

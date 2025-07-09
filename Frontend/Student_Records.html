@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Student Profiles</title>
+    <link rel="stylesheet" href="/Frontend/Css/Student_Record.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/footer.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/global.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/header.css">
+    <link rel="stylesheet" href="/Frontend/Css/components/toast.css">
+     <!-- Link to the fontawsome icons file -->
+    <link href="/Frontend/Css/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- Link to the online axios CDN for fetching data -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body class="antialiased">
+
+    <header class="header" id="Home">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="text_red">University</span> of <span class="text_blue">Liberia</span>
+            </a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="Index.html#Home">Home</a></li>
+                    <li><a href="Upload_form.html">Upload Form</a></li>
+                    <li><a href="Student_Records.html">Department Students</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="Record_container">
+        <div class="Record_container_heading">
+            <h1>University Student Directory</h1>
+            <p>Browse through the profiles of our talented university students.</p>
+        </div>
+
+        <!-- This is the search engine -->
+        <div class="searchBar_container">
+            <input type="text" name="" id="Search" placeholder="eg: Samuel Jackson Doe">
+            <label for="Search">Search</label>
+        </div>
+
+        <main class="main-content">
+
+        
+        </main>
+    </div>
+
+      <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>University of Liberia</h3>
+                <p>
+                    Committed to academic excellence, research, and community service, fostering future leaders of
+                    Liberia and beyond.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Index.html#Home">Home</a></li>
+                    <li><a href="Upload_form.html">Upload Form</a></li>
+                    <li><a href="Student_Records.html">Departments Student</a></li>
+                    <li><a href="About.html">About Department</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <p>
+                    123 University Ave, Monrovia, Liberia<br>
+                    Email: info@ul.edu.lr<br>
+                    Phone: +231 777 123 456
+                </p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; <span id="current-year"></span> University of Liberia. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- This is for the toast noticfication -->
+    <div id="toast-container"></div>
+
+
+    <script type="module" src="./Js/Display_student.js"></script>
+    <!-- <script type="module" src="./Js/toast.js"></script> -->
+   
+</body>
+</html>

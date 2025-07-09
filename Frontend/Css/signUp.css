@@ -1,0 +1,52 @@
+.signUp_container{
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding:2.4em;
+    width:50%;
+    height: auto;
+    margin:0 auto;
+    margin-top:4em;
+    border-radius:10px;
+    
+}
+.signUp_title{
+    text-align: center;
+    font-size:1.7rem;
+    font-weight: 600;
+}
+
+.signUp_group{
+    position: relative;
+    left:4em;
+    margin-top:2em;
+}
+.signUp_group input{
+    outline:none;
+    border-radius:10px;
+    border:none;
+    padding-left:1em;
+    width:80%;
+    height:45px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition:all 0.5s ease-in-out;
+}
+.signUp_group input:hover{
+    border:1px solid blueviolet;
+}
+
+.signUp_group label{
+    color: rgb(159, 154, 148);
+    font-weight: 400;
+}
+.submit_btn{
+    padding:.8em 2em;
+    border-radius:5px;
+    outline:none;
+    border:none;
+    font-size:.9rem;
+    display:flex;
+    justify-self: flex-end;
+    margin:2em 4em 0em 0em;
+    color:white;
+    background-color:#2563eb;;
+}
