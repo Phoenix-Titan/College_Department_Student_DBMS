@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded",()=>{
     const studentID = urlParams.get('studentID')
 
     editStudentRecord(studentID)
+    deleteStudentRecord(studentID)
+
     if (studentID) {
         fetchStudentData(studentID);
     } else {
@@ -106,4 +108,69 @@ const editStudentRecord = (studentId)=>{
         window.location.href = `Edit_student_Record.html?edit_studentID=${studentId}`
     })
 
+}
+
+
+
+const deleteStudentRecord = (studentID)=>{
+    const deleteButton = document.querySelector('.delete_btn');
+
+    deleteButton.addEventListener('click',()=>{
+       DisplayDeletPrompt()
+       
+    })
+}
+
+
+const DisplayDeletPrompt = ()=>{
+    const deleteContainer = document.querySelector('.deletePrompt_container');
+    const coverPage = document.querySelector('.coverPage');
+    const promptMessage = document.createElement('div')
+    deleteContainer.style.display = 'block'
+    coverPage.style.display = 'block'
+
+
+    promptMessage.innerHTML = `
+        <h2>Delete Student Record</h2>
+        <p>Do you want to delete this student record ?</p>
+        <div class="confirmBtns">
+            <button class="yesBtn" value='Yes' type="button">YES</button>
+            <button class="noBtn" value="No" type="button">NO</button>
+        </div>
+    `
+    deleteContainer.append(promptMessage)
+
+    Handle_Deletion_prompt_actions( deleteContainer, coverPage, )
+}
+
+const Handle_Deletion_prompt_actions = async (deleteContainer, coverPage)=>{
+    const yesBtn = document.querySelector('.yesBtn');
+    const noBtn = document.querySelector('.noBtn');
+
+      
+    if(yesBtn && noBtn){
+        yesBtn.addEventListener('click',()=>{
+        deleteContainer.innerHTML = ''
+        deleteContainer.style.display = 'none'
+        coverPage.style.display = "block"
+
+    
+
+        showToast("Student Record Was Delected",'success')
+        setTimeout(() => {
+            window.location.href = 'Student_Records.html'
+        }, 3000);
+
+        })
+
+
+
+        noBtn.addEventListener('click',()=>{
+            deleteContainer.innerHTML = ''
+            deleteContainer.style.display = 'none'
+            coverPage.style.display = "none"
+            console.log("Student Record deletion was Cancel.")
+
+        })
+    }
 }
