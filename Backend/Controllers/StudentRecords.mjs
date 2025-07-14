@@ -258,9 +258,43 @@ const UpdateStudentRecords = async (req, res) => {
     });
 };
 
+
+const DeleteStudentRecord = async (req, res) => {
+    const {studentID} = req.params
+
+    try {
+        if(!studentID){
+            return res.status(404).json({
+                error: "No Student Record ID was Provided, Check the studentID",
+            })
+        }
+
+        const doesStudentExist = await StudentRecordModel.findById(studentID);
+        console.log(doesStudentExist)
+
+        if (!doesStudentExist){
+            return res.status(404).json({
+                error: "This Student Record does not exist, Check the ID",
+            })
+        }
+        
+        await StudentRecordModel.findByIdAndDelete(studentID);
+        
+        return res.json({
+            meg: `StudentID ${studentID} Record has been deleted successfully`
+        })
+
+    } catch (error) {
+        console.log(error);
+    //   you need to need the error where if the ID is incorrect CastError. 
+    }
+
+}
+
 export {
     createStudentRecord,
     getAllStudentRecord,
     getStudentById,
     UpdateStudentRecords,
+    DeleteStudentRecord,
 }
